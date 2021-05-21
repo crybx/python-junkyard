@@ -1,9 +1,9 @@
 name = 'Crybot'
 
-print('Hello World! And hello to %s in particular.' % name) # string interpolation
+print(f'Hello World! And hello to {name} in particular.')  # string interpolation
 print('That\'s my wonderful creator. (^_^)')
 print('=o')
-print('But if you\'re not Crybot, we can still be friends!')
+print(f'But if you\'re not {name}, we can still be friends!')
 print('...')
 
 name = input("So what\'s your name? ")
@@ -17,7 +17,7 @@ days = age * 365
 minutes = age * 525948     
 seconds = age * 31556926
 
-print(name, "has been alive for", days,"days", minutes, "minutes and", seconds, "seconds.")
+print(name, "has been alive for", days, "days", minutes, "minutes and", seconds, "seconds.")
 print('I rounded so I didn\'t have to ask what your birthday is.')
 print('Did you know?')
 print('The United Nations estimate a global average life expectancy of 72.6 years for 2019.')

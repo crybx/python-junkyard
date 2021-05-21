@@ -1,3 +1,6 @@
+.idea
 .vscode
-generated-art/*
-ocr-test-files/*
+alien-mystery-island
+excluded-scripts
+generated-art
+ocr-test-files
