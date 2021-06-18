@@ -12,7 +12,6 @@
 
 import random
 
-# helper functions
 
 def name_to_number(name):
     number = -1
@@ -20,19 +19,14 @@ def name_to_number(name):
     # convert name to number using if/elif/else
     if name == 'rock':
         number = 0
-
     elif name == 'Spock':
         number = 1
-
     elif name == 'paper':
         number = 2
-
     elif name == 'lizard':
         number = 3
-
     elif name == 'scissors':
         number = 4
-
     else:
         print("That was not a valid choice.")
 
@@ -46,24 +40,20 @@ def number_to_name(number):
     # convert number to a name using if/elif/else
     if number == 0:
         name = 'rock'
-
     elif number == 1:
         name = 'Spock'
-
     elif number == 2:
         name = 'paper'
-
     elif number == 3:
         name = 'lizard'
-
     elif number == 4:
         name = 'scissors'
-
     else:
         print("That was not a valid choice.")
 
     # return the result
     return name
+
 
 def rpsls(player_choice):
     
@@ -77,7 +67,7 @@ def rpsls(player_choice):
     player_number = name_to_number(player_choice)
 
     # compute random guess for comp_number using random.randrange()
-    comp_number = random.randrange(0,5)
+    comp_number = random.randrange(0, 5)
 
     # convert comp_number to comp_choice using the function number_to_name()
     comp_choice = number_to_name(comp_number)
@@ -90,9 +80,9 @@ def rpsls(player_choice):
     mod = difference % 5
 
     # use if/elif/else to determine winner, print winner message
-    if (mod == 1) or (mod == 2):
+    if mod == 1 or mod == 2:
         print("Player wins!")
-    elif (mod == 3) or (mod == 4):
+    elif mod == 3 or mod == 4:
         print("Computer wins!")
     else:
         print("Player and Computer tie!")
