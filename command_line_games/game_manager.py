@@ -12,7 +12,7 @@ def print_available_games():
 
 def pick_a_game():
     choice = input("Enter the number of the game to play. Type 'exit' to quit: ")
-    err_msg = "That's not a valid game selection"
+    err_msg = "That's not a valid game choice"
 
     if choice == "exit":
         print("Goodbye ~")
@@ -25,7 +25,6 @@ def pick_a_game():
         else:
             print(err_msg)
             return pick_a_game()
-
     except ValueError:
         print(err_msg)
         return pick_a_game()

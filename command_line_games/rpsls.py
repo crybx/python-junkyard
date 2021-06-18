@@ -57,7 +57,7 @@ def number_to_name(number):
 
 def rpsls(player_choice):
     
-    # print a blank line to separate consecutive games
+    # print a blank line to separate consecutive command_line_games
     print()
 
     # print out the message for the player's choice
