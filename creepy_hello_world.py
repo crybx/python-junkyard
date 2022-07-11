@@ -1,5 +1,5 @@
 def say_hello():
-    name = 'Crybot'
+    name = 'crybx'
 
     print(f'Hello World! And hello to {name} in particular.')  # string interpolation
     print('That\'s my wonderful creator. (^_^)')
