@@ -1,6 +1,8 @@
 .idea
 .vscode
 generated-art
+generated_art
 ocr-test-files
+ocr_test_files
 __pycache__
 *.pyc
