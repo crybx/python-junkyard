@@ -2,19 +2,20 @@ import hangman
 import sys
 import tic_tac_toe
 import tower_of_hanoi
-
+from alien_mystery_island_game import alien_mystery_island
 
 # Create a dictionary of games
 games = {
-    1: hangman,
-    2: tic_tac_toe,
-    3: tower_of_hanoi
+    1: [hangman, "Hangman"],
+    2: [tic_tac_toe, "Tic Tac Toe"],
+    3: [tower_of_hanoi, "Tower of Hanoi"],
+    4: [alien_mystery_island, "Alien Mystery Island"],
 }
 
 
 def print_available_games():
     for game in games:
-        print(f"  {game}: {games[game].__name__}")
+        print(f"  {game}: {games[game][1]}")
 
 
 def pick_a_game():
@@ -44,8 +45,7 @@ def main():
         print("Would you like to play a game?")
         print_available_games()
         choice = pick_a_game()
-        games[choice].play_game()
+        games[choice][0].play_game()
 
 
-if __name__ == "__main__":
-    main()
+main()

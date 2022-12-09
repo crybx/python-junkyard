@@ -1,4 +1,4 @@
-import functions
+from alien_mystery_island_game import functions
 
 
 def welcome():
