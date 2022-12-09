@@ -1,30 +1,39 @@
 import hangman
 import sys
 import tic_tac_toe
+import tower_of_hanoi
+
+
+# Create a dictionary of games
+games = {
+    1: hangman,
+    2: tic_tac_toe,
+    3: tower_of_hanoi
+}
 
 
 def print_available_games():
-    print()
-    print("1: Hangman")
-    print("2: Tic-Tac-Toe")
-    print()
+    for game in games:
+        print(f"  {game}: {games[game].__name__}")
 
 
 def pick_a_game():
-    choice = input("Enter the number of the game to play. Type 'exit' to quit: ")
+    print("Pick a game by typing the number next to it.")
+    print("Type 'exit' to quit.")
+    choice = input("> ")
     err_msg = "That's not a valid game choice"
 
-    if choice == "exit":
+    if choice.lower() == "exit":
         print("Goodbye ~")
         sys.exit()
 
     try:
         game_number = int(choice)
-        if 0 < game_number < 3:
-            return game_number
-        else:
+        # Make sure the game number is valid
+        if game_number not in games:
             print(err_msg)
             return pick_a_game()
+        return game_number
     except ValueError:
         print(err_msg)
         return pick_a_game()
@@ -32,15 +41,10 @@ def pick_a_game():
 
 def main():
     while True:
-        print_available_games()
         print("Would you like to play a game?")
+        print_available_games()
         choice = pick_a_game()
-        if choice == 1:
-            hangman.play_game()
-        elif choice == 2:
-            tic_tac_toe.play_game()
-        else:
-            print("Sorry, that game doesn't work yet.")
+        games[choice].play_game()
 
 
 if __name__ == "__main__":
