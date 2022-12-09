@@ -1,5 +1,5 @@
 Each player starts in a particular location
-You can only move to adjacent rooms or rooms accessible by hidden paths
+You can only move to adjacent areas or areas accessible by hidden paths
 No dice
 
 Setup Phase
@@ -23,11 +23,11 @@ Reveal phase
 Not Your turn phase
 1. Ai chooses a location, weapon, suspect
 2. You see who didn't have a card and are told who showed the AI a card (but not what the card is)
-3. The AI will solve the puzzle if it can and you will lose.
+3. The AI will solve the puzzle if it can, and you will lose.
 
 NPC Knowledge
 1. A place to store info for each of the 6 weapons, 6 players, and 9 rooms.
-2. Who has said they don't have a card.
+2. Who it was that said they didn't have a card.
 3. Trios and duos of data to check for future elimination.
 4. Three bools about if the special item, person, or location are known.
 
@@ -35,12 +35,5 @@ location object
 item object
 person object
 1. does someone have the card? who
-2. Have people said they don't have the card publicly? 
-
-
-class CharacterClass:
-	def __init__(self, playerNumber, isNPC, playerName):
-			self.playerNum = playerNumber
-			self.isNPC = isNPC
-			self.name = playerName
+2. Have people said they don't have the card publicly?
 
