@@ -1,11 +1,13 @@
 """
 Directory Folder Counter by Initial Letter (Windows)
+
 This script counts all folders in a specified Windows directory that begin with each letter
 of the alphabet. Results are displayed in order from most frequent to least frequent initial
 letter, and includes a summary of which letters are represented in the directory structure.
 
 Usage: Run the script and paste a Windows path when prompted (e.g. R:\\books\\Novels).
 """
+
 import os
 import string
 from collections import defaultdict
